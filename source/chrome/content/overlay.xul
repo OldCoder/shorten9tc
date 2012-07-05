@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css"
+                 href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css"
+                 href="chrome://shorten9tc/skin/button.css"?>
+
+<!-- ============================================================= -->
+<!-- Standard setup                                                -->
+<!-- ============================================================= -->
+
+<!-- The  following  code is  standard except for  the unique name -->
+<!-- "shorten9tc".  If you use  this extension as a base,  replace -->
+<!-- the  name in question with the  name that  your "chrome.mani- -->
+<!-- fest" file specifies in its "content" line.                   -->
+
+<overlay
+    id="shorten9tc-overlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/javascript"
+            src="chrome://shorten9tc/content/overlay.js" />
+
+<!-- ============================================================= -->
+<!-- This code sets up the required context-menu entries           -->
+<!-- ============================================================= -->
+
+<!-- This code adds a command to the right-click context menu. The -->
+<!-- new  command pops up a  submenu whose contents are defined by -->
+<!-- the "menupopup" block here.                                   -->
+
+<!-- The "label" attribute for the "menu" block here specifies the -->
+<!-- text used for the new command. The "label" attributes for the -->
+<!-- "menuitem" elements  specify the  text used  for the commands -->
+<!-- on the submenu.                                               -->
+
+<!-- When you add a new  social-networking site,  clone one of the -->
+<!-- "menuitem" entries here and  make the obvious changes.  Don't -->
+<!-- forget to  edit "overlay.js" and  define  the routine  that's -->
+<!-- called by the "menuitem" entry.                               -->
+
+    <popup id="contentAreaContextMenu">
+        <menu id="shorten9tc_menu" insertafter="Stop"
+              label="9.tc Shorten URL">
+        <menupopup>
+        <menuitem label="9.tc URL and Copy"
+                  oncommand="shorten9tc.onMenuClick(event);"     />
+
+        <menuitem label="9.tc URL and EMail"
+                  oncommand="shorten9tc.onEmailURL(event);"      />
+
+        <menuitem label="9.tc URL and Facebook"
+                  oncommand="shorten9tc.onFaceBookURL(event);"   />
+
+        <menuitem label="9.tc URL and FriendFeed"
+                  oncommand="shorten9tc.onFriendFeedURL(event);" />
+
+        <menuitem label="9.tc URL and Tweet"
+                  oncommand="shorten9tc.onTweetURL(event);"      />
+        </menupopup>
+        </menu>
+    </popup>
+
+<!-- ============================================================= -->
+<!-- Button details                                                -->
+<!-- ============================================================= -->
+
+<!-- When you  add a new  social-networking  site,  clone the last -->
+<!-- "toolbarbutton"  entry in this set,  bump the ID number,  and -->
+<!-- make the other  obvious changes.  The new "toolbarbutton" en- -->
+<!-- try's "oncommand" attribute should call the  same routine  as -->
+<!-- the associated "menuitem" entry.                              -->
+
+<!-- Note:  The "class" attribute should use "toolbarbutton-1" for -->
+<!-- all  "toolbarbutton"  entries. The "1" specified in this con- -->
+<!-- text shouldn't be incremented.                                -->
+
+    <toolbarpalette id="BrowserToolbarPalette">
+        <toolbarbutton
+            id="shorten9tc_button_1"
+            label="9tc Copy URL"
+            tooltiptext="9.tc URL and copy it to clipboard"
+            oncommand="shorten9tc.onMenuClick(event);"
+            class="toolbarbutton-1 chromeclass-toolbar-additional"
+        />
+
+        <toolbarbutton
+            id="shorten9tc_button_2"
+            label="9tc Tweet URL"
+            tooltiptext="9tc URL and Tweet it"
+            oncommand="shorten9tc.onTweetURL(event);"
+            class="toolbarbutton-1 chromeclass-toolbar-additional"
+        />
+
+        <toolbarbutton
+            id="shorten9tc_button_3"
+            label="9tc FaceBook URL"
+            tooltiptext="9tc URL and Facebook it"
+            class="toolbarbutton-1 chromeclass-toolbar-additional"
+        />
+
+        <toolbarbutton
+            id="shorten9tc_button_4"
+            label="9tc Email URL"
+            tooltiptext="9tc URL and Email it"
+            oncommand="shorten9tc.onEmailURL(event);"
+            class="toolbarbutton-1 chromeclass-toolbar-additional"
+        />
+
+        <toolbarbutton
+            id="shorten9tc_button_5"
+            label="9tc FriendFeed URL"
+            tooltiptext="9tc URL and FriendFeed it"
+            oncommand="shorten9tc.onFriendFeedURL(event);"
+            class="toolbarbutton-1 chromeclass-toolbar-additional"
+        />
+    </toolbarpalette>
+</overlay>

@@ -1,0 +1,146 @@
+shorten9tc notes                                       Revised: 120704
+----------------------------------------------------------------------
+
+1. Overview.
+
+"shorten9tc"  is a simple Firefox extension that serves primarily as a
+well-commented example of a  minimal right-click extension;  i.e.,  an
+extension that does something useful when the  user  right-clicks on a
+link or an image (or in empty space on a page).
+
+Languages used include JavaScript (for the actual code) and  XML  (for
+RDF and  XUL files). The project provides  source files and  a "build"
+script.  The "build" script produces a standard  XPI file that is com-
+patible with Firefox 3.6 through 12.
+
+"shorten9tc"  is a fork of "Shorten URL" by homyarb.  Both  extensions
+add right-click functionality for links displayed by a browser; speci-
+fically, they run links through a URL-shortening service and optional-
+ly submit the results to social networking sites.
+
+Most of the "Shorten URL" code in  "shorten9tc" has been removed,  re-
+written, and/or commented.  This version is  limited  in functionality
+but should be useful for  developers  starting out with Firefox exten-
+sions and/or JavaScript.
+
+By  default,  "shorten9tc"  uses a particular  URL-shortening  service
+named "9.tc".  As of July 4, 2012, the date this version was released,
+both the service and the extension were  working for  basic shortening
+purposes.
+
+Social networking submissions were tested previously  but not retested
+on this date.
+
+Presently, this extension is for Firefox only. However, it could prob-
+ably be made to work with other Mozilla-based browsers.
+
+"shorten9tc" was created by OldCoder:
+
+      Site:    http://oldcoder.org/
+      Mail:    oldcoder@yahoo.com
+      GitHub:  https://github.com/OldCoder/
+      Repo:    https://github.com/OldCoder/BEWorld.git
+
+The license is GPL 3;  the same as "Shorten URL's" license  as of July
+4, 2012.
+
+----------------------------------------------------------------------
+
+2. History.
+
+Remarks by the initial developer (OldCoder):
+
+As of 2010, hat0 of the Brick Engine project ran a URL shortening ser-
+vice at "9.tc".  He expressed interest in  seeing how a Firefox exten-
+sion that used "9.tc"  might work,  so I forked the standard  "Shorten
+URL" extension and created a new version that supported his site.
+
+As of 2012, the "9.tc" service was still operating.  Whether or not it
+continues to operate indefinitely, the  source code  for the extension
+may be useful as discussed previously.
+
+----------------------------------------------------------------------
+
+3. Usage.
+
+3.1. This extension provides basic support for "9.tc" operations,  in-
+cluding:
+
+      (a) Shorten URL and copy to clipboard
+      (b) Shorten URL and send to Email
+      (c) Shorten URL and send to Facebook
+      (d) Shorten URL and send to FriendFeed
+      (e) Shorten URL and send to Twitter
+
+In most cases,  it should be  relatively easy to add support for other
+social networking sites.
+
+3.2. After the extension is installed,  you  should be able to  use it
+as follows:
+
+(a) Go to a web page and right click in  unused space.  Or right-click
+on a link. Or right-click on an image.
+
+(b) In the context menu,  you should see a list of commands related to
+"9.tc". If you execute one of the commands, it'll be performed for the
+current page,  or for  the selected link  (if you  right-clicked  on a
+link), or for the selected image (if you right-clicked on an image).
+
+3.3. Toolbar icons are provided for each "9.tc" operation (shorten URL
+and Twitter,  shorten URL and  email, etc.).  By  default,  the  icons
+aren't added to any toolbars.  If you'd like to add them, use the fol-
+lowing window (or the equivalent one in your copy of Firefox):
+
+      View -> Toolbars -> Customize
+
+3.4. Presently,  the  icons are very simple  (just text).  However, it
+should be easy to replace them with new versions.
+
+----------------------------------------------------------------------
+
+4. Development.
+
+4.1. Source code.
+
+Full source code for  the extension is  provided in  the  subdirectory
+"source" of the project's GitHub repo.  It's  also included in the XPI
+file, though you'll need to unpack the  ".jar" file  that's  stored in
+one subdirectory to get at some of it.
+
+4.2. Tools.
+
+If you'd like to work on the extension,  Linux is recommended.  You'll
+probably need at least the following tools:
+
+unzip: To unpack the extension's ".xpi" file.
+zip:   To repack the extension's ".xpi" file.
+
+jar (or fastjar): To unpack and repack a  ".jar" file  included in the
+extension.
+
+uuidgen -- To generate new UUID codes.
+
+4.3. Three important steps.
+
+If you  fork this extension to  create your own,  remember to do three
+things:
+
+      (a) Use "uuidgen" (under Linux) to generate a new UUID code
+      (b) Edit "install.rdf" and update the UUID code
+      (c) Change the extension name (in "install.rdf") as well
+
+4.4. Firefox version.
+
+The minimum  Firefox version  supported is presently set to 3.6.  How-
+ever, older versions might work. If you'd like to try them, change the
+minimum-version  setting specified  in the  extension's  "install.rdf"
+file.
+
+For more information about Firefox version numbers, see:
+
+      https://addons.mozilla.org/en-US/firefox/pages/appversions/
+
+4.5. Rebuilding the XPI file.
+
+To rebuild the XPI file,  simply go to the directory that contains the
+script "buildme.sh" and run the script there.

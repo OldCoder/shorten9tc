@@ -1,0 +1,19 @@
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+<Description about="urn:mozilla:install-manifest">
+    <em:type>2</em:type>
+    <em:id>{3b83ee05-9c4f-4a37-af56-0244554c273c}</em:id>
+    <em:version>1.01</em:version>
+    <em:name>shorten9tc</em:name>
+    <em:creator>OldCoder</em:creator>
+    <em:contributor>oldcoder@yahoo.com</em:contributor>
+    <em:homepageURL>http://oldcoder.org/</em:homepageURL>
+    <em:description>Sample right-click extension</em:description>
+    <em:targetApplication>
+        <Description>
+            <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+            <em:minVersion>3.6</em:minVersion>
+            <em:maxVersion>15.*</em:maxVersion>
+        </Description>
+    </em:targetApplication>
+</Description>
+</RDF>

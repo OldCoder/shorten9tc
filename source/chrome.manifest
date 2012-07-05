@@ -1,0 +1,4 @@
+content shorten9tc              jar:chrome/shorten9tc.jar!/content/
+skin    shorten9tc classic/1.0  jar:chrome/shorten9tc.jar!/skin/
+style   chrome://global/content/customizeToolbar.xul chrome://shorten9tc/skin/button.css
+overlay chrome://browser/content/browser.xul         chrome://shorten9tc/content/overlay.xul

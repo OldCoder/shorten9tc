@@ -1,0 +1,56 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#shorten9tc_button_1 {
+    list-style-image: url("chrome://shorten9tc/skin/button24-logo.png");
+}
+
+#shorten9tc_button_2 {
+    list-style-image: url("chrome://shorten9tc/skin/button24-tweet.png");
+}
+
+#shorten9tc_button_3 {
+    list-style-image: url("chrome://shorten9tc/skin/button24-facebook.png");
+}
+
+#shorten9tc_button_4 {
+    list-style-image: url("chrome://shorten9tc/skin/button24-email.png");
+}
+
+#shorten9tc_button_5 {
+    list-style-image: url("chrome://shorten9tc/skin/button24-friendfeed.png");
+}
+
+toolbar[iconsize="small"] #shorten9tc_button_1 {
+    list-style-image: url("chrome://shorten9tc/skin/button16-logo.png");
+}
+
+toolbar[iconsize="small"] #shorten9tc_button_2 {
+    list-style-image: url("chrome://shorten9tc/skin/button16-tweet.png");
+}
+
+toolbar[iconsize="small"] #shorten9tc_button_3 {
+    list-style-image: url("chrome://shorten9tc/skin/button16-facebook.png");
+}
+
+toolbar[iconsize="small"] #shorten9tc_button_4 {
+    list-style-image: url("chrome://shorten9tc/skin/button16-email.png");
+}
+
+toolbar[iconsize="small"] #shorten9tc_button_5 {
+    list-style-image: url("chrome://shorten9tc/skin/button16-friendfeed.png");
+}
+
+.text-label
+  { font-weight:bold; }
+
+.action-url-1
+  { -moz-appearance: none; background-color:#FFFFFF; color:#000000 }
+
+.short-url-1
+  { -moz-appearance: none; background-color:#FFFFFF; color:#000000; font-weight:bold; }
+
+.action-url-2
+  { -moz-appearance: none; background-color:#FFFFFF; color:#000000 }
+
+.short-url-2
+  { -moz-appearance: none; background-color:#FFFFFF; color:#000000; font-weight:bold; }
