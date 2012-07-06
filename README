@@ -1,4 +1,4 @@
-shorten9tc notes                                       Revised: 120704
+shorten9tc notes                                       Revised: 120706
 ----------------------------------------------------------------------
 
 1. Overview.
@@ -39,7 +39,7 @@ ably be made to work with other Mozilla-based browsers.
       Site:    http://oldcoder.org/
       Mail:    oldcoder@yahoo.com
       GitHub:  https://github.com/OldCoder/
-      Repo:    https://github.com/OldCoder/BEWorld.git
+      Repo:    https://github.com/OldCoder/shorten9tc.git
 
 The license is GPL 3;  the same as "Shorten URL's" license  as of July
 4, 2012.
